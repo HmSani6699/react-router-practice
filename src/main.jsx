@@ -10,6 +10,7 @@ import Home from './component/Home/Home';
 import ErrorPage from './component/ErrorPage/ErrorPage';
 import Contact from './component/Contact/Contact';
 import About from './component/About/About';
+import Photos from './component/Photos/Photos';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <About></About>
+      },
+      {
+        path: '/photos',
+        element: <Photos></Photos>,
+        loader: () => fetch('https://jsonplaceholder.typicode.com/photos')
       }
     ]
   }
