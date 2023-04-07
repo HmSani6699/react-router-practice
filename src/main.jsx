@@ -11,6 +11,7 @@ import ErrorPage from './component/ErrorPage/ErrorPage';
 import Contact from './component/Contact/Contact';
 import About from './component/About/About';
 import Photos from './component/Photos/Photos';
+import PhotoDetails from './component/PhotoDetails/PhotoDetails';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
         path: '/photos',
         element: <Photos></Photos>,
         loader: () => fetch('https://jsonplaceholder.typicode.com/photos')
+      },
+      {
+        path: 'photo/:photoId',
+        element: <PhotoDetails></PhotoDetails>,
+        loader: ({ params }) => fetch(`https://jsonplaceholder.typicode.com/photos/${params.photoId}`)
       }
     ]
   }
