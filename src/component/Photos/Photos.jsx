@@ -7,8 +7,8 @@ const Photos = () => {
     const photos = loadPhotos.splice(1, 50);
     return (
         <div>
-            <h1>this is photos component:{photos.length}</h1>
-            <div>
+            <h2 className='text-4xl underline font-bold text-center text-orange-600 mt-6'>Welcome to your Photos : {photos.length}</h2>
+            <div className='grid grid-cols-4 gap-4 mt-12'>
                 {
                     photos.map(photo => <Photo
                         key={photo.id}

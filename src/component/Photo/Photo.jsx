@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Photo = () => {
+const Photo = ({ photo }) => {
+    const { id, url } = photo;
     return (
-        <div>
-            <h1>this is photo container</h1>
+        <div className='bg-lime-700 rounded-md p-6'>
+            <h1 className='text-center mb-4 text-4xl text-white font-extrabold'>ID: {id}</h1>
+            <img src={url} alt="" />
         </div>
     );
 };
