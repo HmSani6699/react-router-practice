@@ -4,7 +4,7 @@ import Photo from '../Photo/Photo';
 
 const Photos = () => {
     const loadPhotos = useLoaderData();
-    const photos = loadPhotos.splice(1, 50);
+    const photos = loadPhotos;
     return (
         <div>
             <h2 className='text-4xl underline font-bold text-center text-orange-600 mt-6'>Welcome to your Photos : {photos.length}</h2>
